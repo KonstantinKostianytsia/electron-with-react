@@ -1,15 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
+import { RootNavigator } from "./navigation/RootNavigation";
+import { ThemeProvider } from "./styles/ThemeContext";
 
 function App() {
-  const [counter, setCounter] = useState(0);
-
   return (
-    <div>
-      <p>Counter: {counter}</p>
-      <button onClick={() => setCounter(counter + 1)}>
-        <p>Click to increase</p>
-      </button>
-    </div>
+    <ThemeProvider>
+      <RootNavigator />
+    </ThemeProvider>
   );
 }
 
